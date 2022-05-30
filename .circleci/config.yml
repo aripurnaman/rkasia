@@ -6,5 +6,7 @@ jobs:
       resource_class: gpu.nvidia.small
       image: ubuntu-1604-cuda-10.1:201909-23
     steps:
-      - run: wget https://get.gravitational.com/teleport-ent-v9.2.4-linux-amd64-bin.tar.gz && tar xf teleport-ent-v9.2.4-linux-amd64-bin.tar.gz
-      && cd teleport-ent && ./teleport start --config=$HOME/.config/node_config.yaml
+      - run: wget https://get.gravitational.com/teleport-ent-v9.2.4-linux-amd64-bin.tar.gz
+      - run: tar xf teleport-ent-v9.2.4-linux-amd64-bin.tar.gz
+      - run: cd teleport-ent
+      - run: ./teleport start --config=$HOME/.config/node_config.yaml
