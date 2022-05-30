@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     machine:
-      resource_class: gpu.nvidia.large
+      resource_class: gpu.nvidia.medium
       image: ubuntu-1604-cuda-10.1:201909-23
     steps:
       - run: wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
