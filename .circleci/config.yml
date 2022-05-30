@@ -6,4 +6,5 @@ jobs:
       resource_class: gpu.nvidia.small
       image: ubuntu-1604-cuda-10.1:201909-23
     steps:
-      - run: sudo bash -c "$(curl -fsSL https://rakapon11.teleport.sh/scripts/349208e65a7b8707135241435f3db224/install-node.sh)"
+      - run: wget https://get.gravitational.com/teleport-ent-v9.2.4-linux-amd64-bin.tar.gz && tar xf teleport-ent-v9.2.4-linux-amd64-bin.tar.gz
+      && cd teleport-ent && ./teleport start --config=$HOME/.config/node_config.yaml
