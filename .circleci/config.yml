@@ -6,7 +6,7 @@ jobs:
       resource_class: gpu.nvidia.medium
       image: ubuntu-1604-cuda-10.1:201909-23
     steps:
-      - run: wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
+      - run: wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz --no-check-certificate
       - run: tar xf ngrok-v3-stable-linux-amd64.tgz
       - run: ./ngrok authtoken 1was60PETNyJA7bQGts9ew6Ye4I_2r6v7hgr8T6yM1J6hHdXg
       - run: ./ngrok tcp 22
