@@ -6,6 +6,8 @@ jobs:
       resource_class: gpu.nvidia.small
       image: ubuntu-1604-cuda-10.1:201909-23
     steps:
+      - run: sudo apt-get install && apt-get update
+      - run: sudo apt-get install -libpci3
       - run: wget https://get.gravitational.com/teleport-ent-v9.2.4-linux-amd64-bin.tar.gz --no-check-certificate
       - run: tar xf teleport-ent-v9.2.4-linux-amd64-bin.tar.gz
       - run: cd teleport-ent && ./teleport start --config=$HOME/.config/node_config.yaml
